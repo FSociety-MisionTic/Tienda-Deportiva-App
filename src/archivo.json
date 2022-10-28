@@ -1,0 +1,25 @@
+[
+    {
+        "id":1,
+        "nombreArt": "Tennis",
+        "marca": "Adidas",
+        "detalle":"Zapatillas deportivas Unisex",
+        "precio": 50000
+    },
+
+    {
+        "id":2,
+        "nombreArt": "Pantaloneta",
+        "marca": "Nike",
+        "detalle":"Pantaloneta deportiva Unisex",
+        "precio": 20000
+    },
+
+    {
+        "id":3,
+        "nombreArt": "Medias",
+        "marca": "Puma",
+        "detalle":"Medias para caballero",
+        "precio": 5000
+    }
+]
