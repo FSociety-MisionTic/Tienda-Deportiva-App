@@ -11,7 +11,7 @@ export function ListaProductos() {
     useEffect(() => {
         const getProductos = async () => {
             try {
-                const response = await fetch("https://my-json-server.typicode.com/juanserdp/productos/productos");
+                const response = await fetch("https://my-json-server.typicode.com/MarianitaCC/Pegasus/productos");
                 const productos = await response.json();
                 setProductos(productos);
             } catch (error) {
