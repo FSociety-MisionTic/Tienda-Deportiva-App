@@ -11,7 +11,7 @@ export function ListaProductos() {
     useEffect(() => {
         const getProductos = async () => {
             try {
-                const response = await fetch("https://my-json-server.typicode.com/MarianitaCC/Pegasus/productos");
+                const response = await fetch("https://fakestoreapi.com/products");
                 const productos = await response.json();
                 setProductos(productos);
             } catch (error) {
@@ -20,21 +20,22 @@ export function ListaProductos() {
         }
         getProductos();
     }, [])
-
+    
     return (
         <Container className="mt-3">
             <Row className="mb-3">
                 {
                     productos.map((product, index) => {
+                        console.log("producto:", product.id);
                         return (
                             <Col key={index} md="4" className="d-flex justify-content-center mb-3">
                                 <Producto
-                                    id={1}
-                                    nombre={product.nombre}
-                                    descripcion={product.descripcion}
-                                    urlImagen={product.urlImagen}
-                                    caracteristicas={product.caracteristicas}
-                                    precio={product.precio}
+                                    id={product.id}
+                                    nombre={product.title}
+                                    descripcion={product.description}
+                                    urlImagen={product.image}
+                                    caracteristicas={null}
+                                    precio={product.price}
                                 />
                             </Col>
                         )

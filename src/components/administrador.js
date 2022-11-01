@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import '../styles/stylesAdmin.css'
-import Inicio from "./inicio";
-import datos from '../archivo.json'
+import Inicio from "./components/inicio";
+import dbprod from '../archivo.json'
+import ventasdb from "../ventas.json"
+import TablasVentas from './pages/ListaVentas';
+import TablaProductos from "./Productos";
 
 function Admin () {
     const volver = () => { 
@@ -9,19 +12,22 @@ function Admin () {
         setInicio(inicio="")
         setvisualizar(visualizar=[])
         setModificar(modificar="")
+        setListaventas(listaventas=[])
     }
 
     function inicializacion(){
         setInicio(inicio=imagen)
         setvisualizar(visualizar=[])
         setModificar(modificar="")
+        setListaventas(listaventas=[])
     }
 
-    function visualizacion () {
+    /*function ListProductos() {
         setInicio(inicio="")
-        setvisualizar(visualizar=datos)
+        setvisualizar(visualizar=<TablaProductos />)
         setModificar(modificar="")
-    }
+        setListaventas(listaventas=[])
+    }*/
 
     function modificacion () {
         let mod = 
@@ -35,12 +41,22 @@ function Admin () {
         setModificar(modificar=mod)
         setInicio(inicio="")
         setvisualizar(visualizar=[])
+        setListaventas(listaventas=[])
     }
+
+    function vistaVentas() {
+        setInicio(inicio="")
+        setvisualizar(visualizar=[])
+        setModificar(modificar="")
+        setListaventas(listasventas=<ListaVentas />)
+    }
+   
 
     let init = <div className="blockAdmin">
                     <button onClick={inicializacion} className="buttonCliente"> Inicio </button>
-                    <button onClick={visualizacion} className="buttonCliente"> Lista Productos </button>
+                    <button onClick={ListProductos} className="buttonCliente"> Lista Productos </button>
                     <button onClick={modificacion} className="buttonCliente"> Modificar Productos </button>
+                    <button onClick={vistaVentas} className="buttonCliente"> Lista Ventas </button>
                     <button onClick={volver} className="buttonCliente"> Volver </button>
                 </div>
     let imagen = <img src="https://p4.wallpaperbetter.com/wallpaper/971/328/974/model-clothing-advertising-blonde-wallpaper-preview.jpg"></img>
@@ -49,20 +65,19 @@ function Admin () {
     let [inicio, setInicio] = useState(imagen)
     let [visualizar, setvisualizar] = useState([])
     let [modificar, setModificar] = useState("")
+    let [listaventas, setListaventas] = useState([])
 
     return(
+        <>
         <div >
             {barra} 
             {inicio}  
-            {visualizar.map( (elem, idx) => {
-                return(
-                    <div className="objetos" key={elem.id}>                        
-                       <strong> Producto {idx+1} : </strong> {"Nombre: " +elem.nombreArt + "  " + "Marca: " + elem.marca + " " + "Detalle: " + elem.detalle + " " + "Precio: "+ " " + elem.precio}
-                    </div>
-                )
-            })} 
-            {modificar}        
+            {visualizar} 
+            {modificar}
+            {listaventas}
+                  
         </div>
+        </>
     )
 
 }
