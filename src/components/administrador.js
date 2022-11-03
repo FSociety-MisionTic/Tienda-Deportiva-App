@@ -55,7 +55,7 @@ function Admin () {
     let init = <div className="blockAdmin">
                     <button onClick={inicializacion} className="buttonCliente"> Inicio </button>
                     <button onClick={ListProductos} className="buttonCliente"> Lista Productos </button>
-                    <button onClick={modificacion} className="buttonCliente"> Modificar Productos </button>
+                    <button size="big"onClick={modificacion} className="buttonCliente"> Modificar Productos </button>
                     <button onClick={vistaVentas} className="buttonCliente"> Lista Ventas </button>
                     <button onClick={volver} className="buttonCliente"> Volver </button>
                 </div>

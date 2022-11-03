@@ -7,7 +7,7 @@ export function useContextoCarroCompras() {
 }
 
 export function ProviderCarroCompras({ children }) {
-
+    const [item, setItem]= useState()
     let carroComprasInicial = JSON.parse(localStorage.getItem("carro_compras") || null) || [];
 
 

@@ -37,8 +37,9 @@ export function Producto({ id, nombre, descripcion, urlImagen, caracteristicas, 
                 {
                     (rol === "administrador") ? (
                         <>
-                            <Button size="small">Eliminar</Button>
-                            <Button size="small" onClick={modificarItem} ></Button>
+                            <Button size="big"onClick={modificarItem} >Modificar</Button>
+                            <Button size="small"></Button>
+                            
                             
                         </>
                     ) : (

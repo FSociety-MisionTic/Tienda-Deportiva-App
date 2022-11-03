@@ -15,7 +15,7 @@ export function Navegacion() {
   return (
     <Navbar bg="light" variant="light">
       <Container>
-        <Navbar.Brand>Tienda Deportiva</Navbar.Brand>
+        <Navbar.Brand>FSOCIETY Tienda Deportiva </Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link to={"/"} as={NavLink}>Lista de Productos</Nav.Link>
           {(rol === "administrador") ? (
