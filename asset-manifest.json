@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Tienda-Deportiva-App/static/css/main.97efc465.css",
+    "main.js": "/Tienda-Deportiva-App/static/js/main.2a2531aa.js",
+    "static/media/deporte.jpg": "/Tienda-Deportiva-App/static/media/deporte.d0306757685eb64f3f89.jpg",
+    "static/media/deporte3.jpg": "/Tienda-Deportiva-App/static/media/deporte3.88761eb6fd614dd8b098.jpg",
+    "static/media/deporte2.jpg": "/Tienda-Deportiva-App/static/media/deporte2.de75fbc70aa41b88263b.jpg",
+    "index.html": "/Tienda-Deportiva-App/index.html",
+    "main.97efc465.css.map": "/Tienda-Deportiva-App/static/css/main.97efc465.css.map",
+    "main.2a2531aa.js.map": "/Tienda-Deportiva-App/static/js/main.2a2531aa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.97efc465.css",
+    "static/js/main.2a2531aa.js"
+  ]
+}
